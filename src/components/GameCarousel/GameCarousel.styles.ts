@@ -10,7 +10,6 @@ const useGameCarouselStyles = () => {
       height: 240,
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 16,
     },
   });
 

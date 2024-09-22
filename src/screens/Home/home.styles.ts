@@ -14,8 +14,9 @@ const useHomeStyles = () => {
       color: 'white',
       fontWeight: '700',
       fontSize: 20,
-      marginTop: 28,
+      marginTop: 20,
       marginBottom: 8,
+      marginLeft: 8,
     },
   });
 

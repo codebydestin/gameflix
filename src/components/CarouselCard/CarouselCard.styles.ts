@@ -7,7 +7,6 @@ const useCarouselCardStyles = () => {
   const stylesheet = StyleSheet.create({
     container: {
       marginHorizontal: 8,
-      marginVertical: 12,
       overflow: 'hidden',
       width: width - 16,
     },
