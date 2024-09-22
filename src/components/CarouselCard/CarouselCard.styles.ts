@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { StyleSheet, useWindowDimensions } from 'react-native';
 
-const useGameCardStyles = () => {
+const useCarouselCardStyles = () => {
   const { width } = useWindowDimensions();
 
   const stylesheet = StyleSheet.create({
@@ -9,15 +9,15 @@ const useGameCardStyles = () => {
       marginHorizontal: 8,
       marginVertical: 12,
       overflow: 'hidden',
-      width: width / 2 - 16,
+      width: width - 16,
     },
     imageContainer: {
       overflow: 'hidden',
       borderRadius: 12,
     },
     image: {
-      width: '100%',
-      height: 180,
+      width: width,
+      height: 210,
       resizeMode: 'cover',
     },
     title: {
@@ -25,7 +25,7 @@ const useGameCardStyles = () => {
       fontSize: 16,
       fontWeight: '700',
       textTransform: 'capitalize',
-      marginVertical: 8,
+      marginVertical: 4,
     },
     date: {
       fontStyle: 'italic',
@@ -41,7 +41,7 @@ const useGameCardStyles = () => {
       zIndex: 999,
       position: 'absolute',
       right: 4,
-      bottom: 8,
+      top: 12,
       borderRadius: 8,
       alignItems: 'center',
       justifyContent: 'center',
@@ -49,6 +49,11 @@ const useGameCardStyles = () => {
     rating: {
       color: 'white',
       fontWeight: '700',
+    },
+    textView: {
+      position: 'absolute',
+      bottom: 8,
+      left: 16,
     },
   });
 
@@ -60,4 +65,4 @@ const useGameCardStyles = () => {
   );
 };
 
-export default useGameCardStyles;
+export default useCarouselCardStyles;

@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Image, Text, View } from 'react-native';
-import useGameCardStyles from './GameCard.styles';
+import useGameCardStyles from './CarouselCard.styles';
 import { GFGame } from '../../types/GFGame';
 
 interface Props {
   game: GFGame;
 }
-const GameCardView: FC<Props> = ({ game }) => {
+const CarouselCardView: FC<Props> = ({ game }) => {
   const styles = useGameCardStyles();
   const { rating, background_image, name, released } = game;
 
@@ -18,10 +18,12 @@ const GameCardView: FC<Props> = ({ game }) => {
         </View>
         <Image source={{ uri: background_image }} style={styles.image} />
       </View>
-      <Text style={styles.title}>{name}</Text>
-      <Text style={styles.date}>{released}</Text>
+      <View style={styles.textView}>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.date}>{released}</Text>
+      </View>
     </View>
   );
 };
 
-export default GameCardView;
+export default CarouselCardView;

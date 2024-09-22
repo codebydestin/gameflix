@@ -3,10 +3,19 @@ import { StyleSheet } from 'react-native';
 
 const useHomeStyles = () => {
   const stylesheet = StyleSheet.create({
-    container: {
+    scrollView: {
       backgroundColor: '#0c0e13',
+    },
+    container: {
       flexDirection: 'row',
       flexWrap: 'wrap',
+    },
+    headerTitle: {
+      color: 'white',
+      fontWeight: '700',
+      fontSize: 20,
+      marginTop: 28,
+      marginBottom: 8,
     },
   });
 
