@@ -15,9 +15,6 @@ export const GFFilterView: FC<Props> = ({ genres, onSelectTab }) => {
   return (
     <View style={styles.container}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <Pressable style={styles.activeTab}>
-          <Text style={styles.text}>All Grenres</Text>
-        </Pressable>
         {genres?.map((genre, index) => (
           <Pressable
             key={genre.slug}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import client from '../client/client';
 import { ApiResponse, GFGame, GFGenre } from '../types/GFGame';
+import Config from 'react-native-config';
 
 export default () => {
   const [results, setResults] = useState<GFGame[] | null>(null);
@@ -12,9 +13,9 @@ export default () => {
     setTopResults(null);
 
     try {
-      const { data } = await client.get<ApiResponse>('/api/games', {
+      const { data } = await client.get<ApiResponse>('/games', {
         params: {
-          key: '6414ec556cba4050be243e3c6210f3de',
+          key: Config.API_KEY,
           page_size: 40,
         },
       });
